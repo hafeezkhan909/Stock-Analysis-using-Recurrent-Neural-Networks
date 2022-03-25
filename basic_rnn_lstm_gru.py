@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
 import os
 import tensorflow as tf
 import numpy as np
@@ -11,9 +5,6 @@ from datetime import datetime
 from tensorflow.keras import layers
 from keras.callbacks import ModelCheckpoint
 from Utils import binary_cross_entropy_loss, mse_loss, rnn_sequential
-
-
-# In[ ]:
 
 
 class generalRNN():
@@ -45,10 +36,8 @@ class generalRNN():
         
         if not os.path.exists(model_path):
             os.makedirs(model_path)
-        self.save_file_name = '{}'.format(model_path) +                               datetime.now().strftime('%H%M%S') + '.hdf5'
+        self.save_file_name = '{}'.format(model_path) + datetime.now().strftime('%H%M%S') + '.hdf5'
 
-
-# In[ ]:
 
 
 def _build_model(self, x, y):
@@ -76,8 +65,6 @@ def _build_model(self, x, y):
 
     return model
 
-
-# In[ ]:
 
 
 def fit(self, x, y):
@@ -107,8 +94,6 @@ def fit(self, x, y):
 
     return self.predictor_model
 
-
-# In[ ]:
 
 
 def predict(self, test_x):
