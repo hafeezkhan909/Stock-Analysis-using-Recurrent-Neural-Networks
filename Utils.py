@@ -1,10 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
-# Necessary packages
 import numpy as np
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 import tensorflow as tf
@@ -38,15 +31,15 @@ def binary_cross_entropy_loss (y_true, y_pred):
   # Exclude masked labels
     idx = tf.cast((y_true >= 0), float)
   # Cross entropy loss excluding masked labels
-    loss = -(idx * y_true * tf.math.log(y_pred) +            idx * (1-y_true) * tf.math.log(1-y_pred))
+    loss = -(idx * y_true * tf.math.log(y_pred) + idx * (1-y_true) * tf.math.log(1-y_pred))
     return loss
 
 
 def mse_loss (y_true, y_pred):
 
-  # Exclude masked labels
+ 
     idx = tf.cast((y_true >= 0), float)
-  # Mean squared loss excluding masked labels
+ 
     loss = idx * tf.pow(y_true - y_pred, 2)
     return loss
 
