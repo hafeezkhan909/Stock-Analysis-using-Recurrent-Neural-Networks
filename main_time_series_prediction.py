@@ -1,16 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[6]:
-
-
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
-
-
-# In[9]:
-
 
 import argparse
 import warnings
@@ -19,10 +9,6 @@ warnings.filterwarnings("ignore")
 from data_loader import data_loader
 from basic_rnn_lstm_gru import generalRNN
 from Utils import performance
-
-
-# In[ ]:
-
 
 def main (args):  
     
