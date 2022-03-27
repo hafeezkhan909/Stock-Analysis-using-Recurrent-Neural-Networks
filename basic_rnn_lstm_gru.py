@@ -83,7 +83,7 @@ def fit(self, x, y):
                                 mode='min', verbose=False,
                                 save_best_only=True)
 
-# Train the model
+# For training the model
     self.predictor_model.fit(train_x, train_y, 
                              batch_size=self.batch_size, epochs=self.epoch, 
                              validation_data=(valid_x, valid_y), 
